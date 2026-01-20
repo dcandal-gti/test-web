@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos de Minería de Textos - Universidad de Vigo - Profesor: David Candal Ventureira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-content">
+        <h1>Recursos Avanzados en Minería de Textos</h1>
+        <p>Bienvenidos al portal de soporte para el curso de Minería de Textos impartido en la Universidad de Vigo. Este sitio ofrece materiales detallados sobre técnicas complejas para el procesamiento y análisis de datos textuales no estructurados. Exploraremos conceptos como extracción de características, modelado de temas y aprendizaje automático aplicado a textos grandes volúmenes de datos.</p>
+        
+        <section>
+            <h2>Introducción a la Minería de Textos</h2>
+            <p>La minería de textos, también conocida como text mining, implica el descubrimiento de patrones y conocimiento útil a partir de colecciones de documentos textuales. En entornos académicos y empresariales, esta disciplina se utiliza para analizar opiniones en redes sociales, extraer información de artículos científicos o clasificar correos electrónicos. En la Universidad de Vigo, enfocamos nuestros estudios en algoritmos eficientes para manejar big data textual, considerando desafíos como el ruido en los datos, la variabilidad lingüística y la escalabilidad computacional.</p>
+            <p>Por ejemplo, consideremos un corpus de miles de reseñas de productos. Usando técnicas como el preprocesamiento (tokenización, stemming y lematización), podemos transformar el texto crudo en vectores numéricos listos para análisis. Herramientas como NLTK o spaCy en Python facilitan este proceso, permitiendo la eliminación de stop words y la normalización de términos.</p>
+        </section>
+        
+        <section>
+            <h2>Técnicas de Extracción de Características</h2>
+            <p>Una de las fases clave es la extracción de características. Métodos como Bag-of-Words (BoW) representan documentos como vectores de frecuencias de palabras, ignorando el orden pero capturando la ocurrencia. Sin embargo, para contextos más complejos, preferimos TF-IDF (Term Frequency-Inverse Document Frequency), que pondera la importancia de un término en un documento relativo al corpus entero. La fórmula de TF-IDF es: TF-IDF(t, d) = TF(t, d) × log(N / DF(t)), donde TF es la frecuencia del término t en el documento d, DF es el número de documentos que contienen t, y N es el total de documentos.</p>
+            <p>En aplicaciones avanzadas, incorporamos embeddings como Word2Vec o BERT, que capturan semántica contextual. Por instancia, en un proyecto de la Universidad de Vigo sobre análisis de sentiment en textos médicos, usamos BERT para vectorizar frases y clasificar emociones con precisión superior al 85% en datasets como MIMIC-III.</p>
+            <ul>
+                <li>Ventajas de TF-IDF: Simple y efectivo para búsqueda de información.</li>
+                <li>Desventajas: No captura sinonimias o polisemias sin embeddings adicionales.</li>
+                <li>Ejemplo práctico: En minería de opiniones, TF-IDF ayuda a identificar términos clave como "fiable" o "defectuoso" en reseñas de productos electrónicos.</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Modelado de Temas y Clustering</h2>
+            <p>El modelado de temas, como LDA (Latent Dirichlet Allocation), asume que los documentos son mezclas de temas latentes, y cada tema es una distribución sobre palabras. En la Universidad de Vigo, aplicamos LDA para analizar corpus de publicaciones científicas, identificando clusters como "aprendizaje profundo" o "procesamiento de lenguaje natural". La implementación en bibliotecas como Gensim permite iterar sobre hiperparámetros como alpha y beta para optimizar la coherencia de temas.</p>
+            <p>Otro enfoque es el clustering jerárquico o K-Means sobre vectores TF-IDF para agrupar documentos similares. En un caso de estudio con datos de Twitter, logramos agrupar tweets sobre cambio climático en categorías como "políticas ambientales" y "impactos locales", con una silueta score de 0.65.</p>
+            <table>
+                <thead>
+                    <tr><th>Técnica</th><th>Aplicación</th><th>Ventajas</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>LDA</td><td>Descubrimiento de temas en corpus grandes</td><td>Probabilístico y interpretable</td></tr>
+                    <tr><td>K-Means</td><td>Clustering de documentos</td><td>Eficiente para datasets escalables</td></tr>
+                    <tr><td>BERT</td><td>Embeddings contextuales</td><td>Captura semántica profunda</td></tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Desafíos Avanzados y Casos de Estudio</h2>
+            <p>Entre los desafíos complejos se encuentran el manejo de multilenguaje, donde técnicas como mBERT permiten procesar textos en español, gallego e inglés simultáneamente. En la Universidad de Vigo, un proyecto reciente analizó foros educativos multilingües para extraer patrones de aprendizaje colaborativo, usando cross-lingual embeddings para alinear vectores semánticos.</p>
+            <p>Otro tema es la detección de entidades nombradas (NER) con modelos como spaCy o Hugging Face Transformers. En minería de textos legales, identificamos entidades como "empresas" o "fechas" con F1-score superior al 90%. Además, incorporamos aprendizaje no supervisado para descubrir entidades emergentes en datos dinámicos como noticias en tiempo real.</p>
+            <p>Para profundizar, recomendamos explorar bibliotecas como scikit-learn para clustering, TensorFlow para redes neuronales en textos, y herramientas de visualización como WordCloud para representar frecuencias de términos. En nuestros talleres en Vigo, los estudiantes aplican estos conceptos en datasets reales como el de Reuters o Wikipedia dumps.</p>
+        </section>
+        
+        <footer>
+            <p>Contacto: dcandal@uvigo.es | Universidad de Vigo, Departamento de Informática, CCIA | Actualizado: Enero 2026</p>
+        </footer>
+    </div>
+
+    <script src="load.js"></script>
+</body>
+</html>
